@@ -1,6 +1,6 @@
+#!/usr/bin/python3
+""" Log parsing"""
 import sys
-/usr/bin/python3
-""" Log parsing """
 
 
 t_size = 0
