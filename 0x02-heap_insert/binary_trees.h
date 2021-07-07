@@ -21,9 +21,22 @@ struct binary_tree_s
 	struct binary_tree_s *right;
 };
 
+struct queue_s
+{
+	struct binary_tree_s *node;
+	struct queue_s *next;
+};
+
 typedef struct binary_tree_s binary_tree_t;
+typedef struct binary_tree_s heap_t;
+typedef struct queue_s queue_t;
 
 void binary_tree_print(const binary_tree_t *tree);
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
+heap_t *heap_insert(heap_t **root, int value);
+queue_t *enqueue(queue_t **heap_q, heap_t *node);
+void dequeue(queue_t **heap_q);
+heap_t *lvl_order_travrsl(heap_t **root, int value);
+heap_t *swap(heap_t *node);
 
 #endif /* BINARY_TREES_H */
