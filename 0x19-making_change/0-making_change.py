@@ -24,7 +24,7 @@ def makeChange(coins, total):
     while (amount < total):
         if not coins:
             return -1
-        if max(coins) < total:
+        if max(coins) + amount <= total:
             amount += max(coins)
             totalcoins += 1
         else:
